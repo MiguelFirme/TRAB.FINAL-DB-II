@@ -1,0 +1,88 @@
+CREATE TABLE Clientes (
+    id_cliente INT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cpf CHAR(11) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL,
+    telefone VARCHAR(15) NOT NULL)
+;
+
+CREATE TABLE Enderecos (
+    id_cliente INT PRIMARY KEY,
+    logradouro VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(50),
+    bairro VARCHAR(50) NOT NULL,
+    cidade VARCHAR(50) NOT NULL,
+    estado CHAR(2) NOT NULL,
+    cep CHAR(8) NOT NULL,
+    CONSTRAINT fk_endereco_cliente FOREIGN KEY (id_cliente)
+        REFERENCES Clientes (id_cliente)
+;
+
+CREATE TABLE Aparelhos (
+    id_aparelho INT PRIMARY KEY,
+    id_cliente INT NOT NULL,
+    marca VARCHAR(50) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    numero_serie VARCHAR(50) NOT NULL UNIQUE,
+    ano_fabricacao INT NOT NULL,
+    CONSTRAINT fk_aparelho_cliente FOREIGN KEY (id_cliente)
+        REFERENCES Clientes (id_cliente)
+;
+
+CREATE TABLE Planos_Seguro (
+    id_plano INT PRIMARY KEY,
+    nome_plano VARCHAR(50) NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    cobertura VARCHAR(255) NOT NULL,
+    valor_mensal DECIMAL(10, 2) NOT NULL,
+    franquia DECIMAL(10, 2) NOT NULL,
+    limite_cobertura DECIMAL(15, 2) NOT NULL
+);
+
+
+CREATE TABLE Apolices (
+    id_apolice INT PRIMARY KEY,
+    id_cliente INT NOT NULL,
+    id_aparelho INT NOT NULL,
+    id_plano INT NOT NULL,
+    data_inicio DATE NOT NULL,
+    data_fim DATE NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    CONSTRAINT fk_apolice_cliente FOREIGN KEY (id_cliente)
+        REFERENCES Clientes (id_cliente),
+    CONSTRAINT fk_apolice_aparelho FOREIGN KEY (id_aparelho)
+        REFERENCES Aparelhos (id_aparelho),
+    CONSTRAINT fk_apolice_plano FOREIGN KEY (id_plano)
+        REFERENCES Planos_Seguro (id_plano)
+);
+
+CREATE TABLE Sinistros (
+    id_sinistro INT PRIMARY KEY,
+    id_apolice INT NOT NULL,
+    data_ocorrencia DATE NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    CONSTRAINT fk_sinistro_apolice FOREIGN KEY (id_apolice)
+        REFERENCES Apolices (id_apolice)
+);
+
+CREATE TABLE Reparos (
+    id_reparo INT PRIMARY KEY,
+    id_sinistro INT NOT NULL,
+    data_reparo DATE NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    valor_reparo DECIMAL(10,2) NOT NULL,
+    CONSTRAINT fk_reparo_sinistro FOREIGN KEY (id_sinistro)
+        REFERENCES Sinistros (id_sinistro)
+);
+
+CREATE TABLE Pagamentos (
+    id_pagamento INT PRIMARY KEY,
+    id_apolice INT NOT NULL,
+    data_pagamento DATE NOT NULL,
+    valor DECIMAL(10,2) NOT NULL,
+    metodo_pagamento VARCHAR(50) NOT NULL,
+    CONSTRAINT fk_pagamento_apolice FOREIGN KEY (id_apolice)
+        REFERENCES Apolices (id_apolice)
+);
