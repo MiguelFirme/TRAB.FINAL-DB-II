@@ -11,6 +11,7 @@ Linguagem para CRUD: PHP
 ## 👥 Integrantes
 - Ana Julia Vieira Lidorio — anajulidorio
 - Ana Laura Vicenzi Dordete — anaavicenzi
+- João Gustavo Rodovanski Vitali - gutinjao22
 - Lara da Rosa Dondossola — laradondossola
 - Lorenzo Viero Sartori — loren1z9o
 - Miguel Antônio Gregório Firme — miguelfirme
