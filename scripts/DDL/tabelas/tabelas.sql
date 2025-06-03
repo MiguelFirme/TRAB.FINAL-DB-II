@@ -9,7 +9,7 @@ CREATE TABLE Clientes (
 
 CONSTRAINT fk_clientes_endereco FOREIGN KEY (id_endereco)
         REFERENCES enderecos (id_endereco)
-;
+);
 
 CREATE TABLE Enderecos (
     id_endereco INT IDENTITY PRIMARY KEY,
@@ -19,8 +19,8 @@ CREATE TABLE Enderecos (
     bairro VARCHAR(40) NOT NULL,
     cidade VARCHAR(40) NOT NULL,
     estado CHAR(2) NOT NULL,
-    cep CHAR(8) NOT NULL,
-;
+    cep CHAR(8) NOT NULL
+);
 
 CREATE TABLE Aparelhos (
     id_aparelho INT IDENTITY PRIMARY KEY,
@@ -33,9 +33,9 @@ CREATE TABLE Aparelhos (
 
     CONSTRAINT fk_aparelho_cliente FOREIGN KEY (id_cliente)
         REFERENCES Clientes (id_cliente)
-;
+);
 
-CREATE TABLE planos_seguro (
+CREATE TABLE Planos_Seguro (
     id_plano TINYINT IDENTITY PRIMARY KEY,
     nome_plano VARCHAR(50) NOT NULL,
     descricao VARCHAR(100) NOT NULL,
