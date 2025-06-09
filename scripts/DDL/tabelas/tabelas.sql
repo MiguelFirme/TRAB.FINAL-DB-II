@@ -1,3 +1,14 @@
+CREATE TABLE Enderecos (
+    id_endereco INT IDENTITY PRIMARY KEY,
+    logradouro VARCHAR(100) NOT NULL,
+    numero VARCHAR(6) NULL,
+    complemento VARCHAR(30) NULL,
+    bairro VARCHAR(40) NOT NULL,
+    cidade VARCHAR(40) NOT NULL,
+    estado CHAR(2) NOT NULL,
+    cep CHAR(8) NOT NULL
+);
+
 CREATE TABLE Clientes (
     id_cliente INT IDENTITY PRIMARY KEY,
     id_endereco INT NOT NULL,
@@ -11,17 +22,6 @@ CONSTRAINT fk_clientes_endereco FOREIGN KEY (id_endereco)
         REFERENCES enderecos (id_endereco)
 );
 
-CREATE TABLE Enderecos (
-    id_endereco INT IDENTITY PRIMARY KEY,
-    logradouro VARCHAR(100) NOT NULL,
-    numero VARCHAR(10) NULL,
-    complemento VARCHAR(40) NULL,
-    bairro VARCHAR(40) NOT NULL,
-    cidade VARCHAR(40) NOT NULL,
-    estado CHAR(2) NOT NULL,
-    cep CHAR(8) NOT NULL
-);
-
 CREATE TABLE Aparelhos (
     id_aparelho INT IDENTITY PRIMARY KEY,
     id_cliente INT NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE Aparelhos (
     modelo VARCHAR(30) NOT NULL,
     imei VARCHAR(15) NOT NULL UNIQUE,
     valor_mercado DECIMAL(10,2) NOT NULL,
-    ano_fabricacao INT NULL,
+    ano_fabricacao SMALLINT NULL,
 
     CONSTRAINT fk_aparelho_cliente FOREIGN KEY (id_cliente)
         REFERENCES Clientes (id_cliente)
@@ -38,11 +38,12 @@ CREATE TABLE Aparelhos (
 CREATE TABLE Planos_Seguro (
     id_plano TINYINT IDENTITY PRIMARY KEY,
     nome_plano VARCHAR(50) NOT NULL,
-    descricao VARCHAR(100) NOT NULL,
+    descricao VARCHAR(200) NOT NULL,
     valor DECIMAL(10,2) NOT NULL,
     cobertura_roubo BIT NOT NULL,
     cobertura_danos BIT NOT NULL,
-    cobertura_perda BIT NOT NULL
+    cobertura_reposicao BIT NOT NULL,
+    cobertura_internacional BIT NOT NULL 
 );
 
 
@@ -65,7 +66,7 @@ CREATE TABLE Apolices (
 CREATE TABLE Sinistros (
     id_sinistro INT IDENTITY PRIMARY KEY,
     id_apolice INT NOT NULL,
-    data_ocorrencia DATE NOT NULL,
+    data_ocorrencia SMALLDATETIME NOT NULL,
     descricao VARCHAR(255) NOT NULL,
     tipo_ocorrencia VARCHAR(30) NOT NULL,
     status_sinistro VARCHAR(20) NOT NULL,
