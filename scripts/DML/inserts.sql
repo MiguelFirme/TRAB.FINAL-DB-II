@@ -40,7 +40,6 @@ INSERT INTO Aparelhos (id_cliente, marca, modelo, imei, valor_mercado, ano_fabri
 (11, 'Samsung', 'Galaxy A54', '351234567891011', 1800.00, 2023),
 (12, 'Apple', 'iPhone 12', '353456789013012', 4000.00, 2020);
 
-
 INSERT INTO Planos_Seguro (nome_plano, descricao, valor, cobertura_roubo, cobertura_danos, cobertura_reposicao, cobertura_internacional)
 VALUES
 ('Bronze', 'Quebra acidental e roubo/furto mediante arrombamento', 29.90, 1, 1, 0 , 0),
@@ -63,16 +62,20 @@ INSERT INTO Apolices (id_aparelho, id_plano, data_inicio_vigencia, data_fim_vige
 (12, 3, GETDATE(), DATEADD(YEAR, 1, GETDATE()), 3500.00, 350.00, 'Ativa');
 
 INSERT INTO Sinistros (id_apolice, data_ocorrencia, descricao, tipo_ocorrencia, status_sinistro) VALUES
-(1, '2025-01-15', 'Roubo em via pública', 'Roubo', 'Em análise'),
+(1, '2024-01-15', 'Roubo em via pública', 'Roubo', 'Em análise'),
 (2, '2025-02-20', 'Queda do aparelho', 'Dano', 'Concluído'),
 (3, '2025-03-05', 'Perda do aparelho', 'Perda', 'Em análise'),
-(4, '2025-03-15', 'Roubo na residência', 'Roubo', 'Concluído'),
+(4, '2024-02-27', 'Roubo na residência', 'Roubo', 'Concluído'),
+(4, '2025-03-08', 'Perda em viagem internacional', 'Perda', 'Em análise'),
+(4, '2023-12-15', 'Dano por água', 'Dano', 'Concluído'),
 (5, '2025-04-10', 'Dano na tela', 'Dano', 'Em reparo'),
-(6, '2025-04-20', 'Perda em viagem', 'Perda', 'Negado'),
+(5, '2024-06-25', 'Roubo na saída da escola', 'Roubo', 'Em análise'),
+(6, '2024-04-20', 'Perda em viagem', 'Perda', 'Negado'),
 (7, '2025-04-25', 'Roubo em transporte público', 'Roubo', 'Em análise'),
-(8, '2025-05-01', 'Dano por água', 'Dano', 'Em análise'),
+(8, '2023-05-01', 'Dano por água', 'Dano', 'Em análise'),
+(8, '2024-10-12', 'Roubo no ônibus', 'Roubo', 'Concluído'),
 (9, '2025-05-10', 'Perda no shopping', 'Perda', 'Em análise'),
-(10, '2025-05-15', 'Roubo na saída do trabalho', 'Roubo', 'Concluído');
+(10, '2023-05-15', 'Roubo na saída do trabalho', 'Roubo', 'Concluído');
 
 INSERT INTO Reparos (id_sinistro, data_envio, data_conclusao, custo_reparo) VALUES
 (2, '2025-02-21', '2025-03-01', 500.00),
