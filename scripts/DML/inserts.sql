@@ -41,12 +41,12 @@ INSERT INTO Aparelhos (id_cliente, marca, modelo, imei, valor_mercado, ano_fabri
 (12, 'Apple', 'iPhone 12', '353456789013012', 4000.00, 2020);
 
 
-INSERT INTO Planos_Seguro (nome_plano, descricao, valor, cobertura_roubo, cobertura_danos, cobertura_perda)
+INSERT INTO Planos_Seguro (nome_plano, descricao, valor, cobertura_roubo, cobertura_danos, cobertura_reposicao, cobertura_internacional)
 VALUES
-('Bronze', 'Quebra acidental e roubo/furto mediante arrombamento', 29.90, 1, 1, 0),
-('Prata', 'Bronze + furto simples, danos elétricos e bloqueio remoto', 49.90, 1, 1, 1),
-('Ouro', 'Prata + reposição emergencial', 69.90, 1, 1, 1),
-('Diamante', 'Ouro + cobertura internacional', 89.90, 1, 1, 1);
+('Bronze', 'Quebra acidental e roubo/furto mediante arrombamento', 29.90, 1, 1, 0 , 0),
+('Prata', 'Bronze + furto simples, danos elétricos e bloqueio remoto', 49.90, 1, 1, 0, 0),
+('Ouro', 'Prata + reposição emergencial', 69.90, 1, 1, 1 , 0),
+('Diamante', 'Ouro + cobertura internacional', 89.90, 1, 1, 1, 1);
 
 INSERT INTO Apolices (id_aparelho, id_plano, data_inicio_vigencia, data_fim_vigencia, valor_cobertura, valor_franquia, status_apolice) VALUES
 (1, 1, GETDATE(), DATEADD(year, 1, GETDATE()), 3000.00, 300.00, 'Ativa'),
