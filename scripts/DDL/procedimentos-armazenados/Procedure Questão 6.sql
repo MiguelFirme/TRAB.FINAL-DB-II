@@ -3,7 +3,7 @@ CREATE PROCEDURE sp_info_cliente_completa
 AS
 BEGIN
     SELECT
-        -- Dados cadastrais
+      
         c.nome,
         c.cpf,
         c.email,
@@ -17,7 +17,7 @@ BEGIN
         e.estado,
         e.cep,
 
-        -- Totais e somatórios
+        
         COUNT(DISTINCT ap.id_apolice) AS total_apolices,
         COUNT(DISTINCT s.id_sinistro) AS total_sinistros,
         ISNULL(SUM(DISTINCT pg.valor_pago), 0) AS valor_total_pago,
