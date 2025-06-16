@@ -27,6 +27,8 @@ $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Plano de Seguro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <style>
         body { background: linear-gradient(120deg, #0f2027, #2c5364); min-height: 100vh; color: #fff; }
         .container { background: rgba(255,255,255,0.05); border-radius: 16px; padding: 2rem; margin-top: 2rem; box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37); }
