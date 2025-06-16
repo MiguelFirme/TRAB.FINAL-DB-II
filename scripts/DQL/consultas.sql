@@ -65,7 +65,7 @@ GROUP BY Clientes.id_cliente, Clientes.nome
 ORDER BY posicao;
 
 --6-Crie uma procedure que receba um ID de cliente e retorne: Dados cadastrais, Total de apólices, Total de sinistros, Valor total pago, Valor total de reparos
-CREATE PROCEDURE sp_resumo_cliente @id_cliente INT AS
+CREATE OR ALTER PROCEDURE sp_resumo_cliente @id_cliente INT AS
 BEGIN
     DECLARE @total_apolices INT,
             @total_sinistros INT,
@@ -73,7 +73,7 @@ BEGIN
             @total_reparos DECIMAL(10,2);
 
     SELECT @total_apolices = COUNT(Apolices.id_apolice) 
-    FROM Aparelhos
+    FROM Aparelhos 
     INNER JOIN Apolices ON Aparelhos.id_aparelho = Apolices.id_aparelho
     WHERE Aparelhos.id_cliente = @id_cliente;
 
@@ -87,7 +87,8 @@ BEGIN
     FROM Aparelhos
     INNER JOIN Apolices ON Aparelhos.id_aparelho = Apolices.id_aparelho
     INNER JOIN Pagamentos ON Apolices.id_apolice = Pagamentos.id_apolice
-    WHERE Aparelhos.id_cliente = @id_cliente;
+    WHERE Aparelhos.id_cliente = @id_cliente
+    AND Pagamentos.status_pagamento = 'Pago';
 
     SELECT @total_reparos = SUM(Reparos.custo_reparo)
     FROM Aparelhos
@@ -96,13 +97,14 @@ BEGIN
     INNER JOIN Reparos ON Sinistros.id_sinistro = Reparos.id_sinistro
     WHERE Aparelhos.id_cliente = @id_cliente;
 
-    SELECT Clientes.*, 
-           @total_apolices AS total_apolices,
-           @total_sinistros AS total_sinistros,
-           @total_pago AS total_pago,
-           @total_reparos AS total_reparos
+    SELECT 
+        Clientes.*, 
+        @total_apolices AS total_apolices,
+        @total_sinistros AS total_sinistros,
+        @total_pago AS total_pago,
+        @total_reparos AS total_reparos
     FROM Clientes
     WHERE Clientes.id_cliente = @id_cliente;
 END;
 
-EXEC sp_resumo_cliente @id_cliente = 3;
+EXEC sp_resumo_cliente @id_cliente = 1;
