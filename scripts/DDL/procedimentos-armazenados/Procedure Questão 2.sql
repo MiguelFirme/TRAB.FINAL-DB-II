@@ -6,6 +6,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
+    WITH RankingCTE AS (
     SELECT 
         a.modelo,
         COUNT(r.id_reparo) AS qtd_reparos,
@@ -19,6 +20,15 @@ BEGIN
         (@data_inicio IS NULL OR r.data_conclusao >= @data_inicio)
         AND (@data_fim IS NULL OR r.data_conclusao <= @data_fim)
     GROUP BY a.modelo
-    HAVING COUNT(r.id_reparo) >= @min_reparos
-    ORDER BY custo_medio_reparo DESC;
+    HAVING COUNT(r.id_reparo) >= @min_reparos)
+        
+    SELECT TOP 5
+        modelo,
+        qtd_reparos,
+        custo_medio_reparo,
+        posicao_ranking
+    FROM RankingCTE
+    WHERE custo_medio_reparo > 2000.00
+    ORDER BY posicao_ranking;
+
 END;
