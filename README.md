@@ -17,7 +17,6 @@ Linguagem para CRUD: PHP
 - Miguel Antônio Gregório Firme — miguelfirme
 
 ## Modelo Físico
-
 Utilizamos a ferramenta de modelagem de dados [dbdiagram.io](https://dbdiagram.io/) para a criação do nosso modelo físico do projeto e exportamos os scripts DDL a partir dele. 
 Arquivo fonte: [Modelo Físico](https://dbdiagram.io/d/683508c16980ade2eb84272b) 
 
@@ -28,8 +27,21 @@ As informações sobre as tabelas e índices, como nomes das colunas, tipos de d
 Para o desenvolvimento deste projeto, utilizamos o banco de dados [Azure SQL](https://azure.microsoft.com/pt-br/products/azure-sql/database)
 
 Abaixo, temos todos os scripts que foram usados no projeto:
-- [Tabelas](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/tabelas)
-- [Índices](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/indices)
-- [Gatilhos](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/gatilhos)
-- [Procedimentos Armazenados](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/procedimentos-armazenados)
-- [Funções](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/funcoes)
+
+#DDL
+- [Script de Criação das Tabelas](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/tabelas)
+- [Script de Criação dos Índices](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/indices)
+- [Script de Criação dos Gatilhos](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/gatilhos)
+- [Script de Criação dos Procedimentos Armazenados](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/procedimentos-armazenados)
+- [Script de Criação das Funções](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/funcoes)
+
+#DML 
+- [Inserção de dados nas tabelas](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DML)
+
+#DQL
+- [Script das consultas para as perguntas de negócio](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DQL)
+
+## Códifo Fonte de CRUD
+- Linguagem de Programação PHP
+
+## Passos para execução do CRUD
