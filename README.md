@@ -16,3 +16,20 @@ Linguagem para CRUD: PHP
 - Lorenzo Viero Sartori — loren1z9o
 - Miguel Antônio Gregório Firme — miguelfirme
 
+## Modelo Físico
+
+Utilizamos a ferramenta de modelagem de dados [dbdiagram.io](https://dbdiagram.io/) para a criação do nosso modelo físico do projeto e exportamos os scripts DDL a partir dele. 
+Arquivo fonte: [Modelo Físico](https://dbdiagram.io/d/683508c16980ade2eb84272b) 
+
+## Dicionário de Dados
+As informações sobre as tabelas e índices, como nomes das colunas, tipos de dados, entre outras características, foram documentados na planilha: 
+
+## Scripts SQL
+Para o desenvolvimento deste projeto, utilizamos o banco de dados [Azure SQL](https://azure.microsoft.com/pt-br/products/azure-sql/database)
+
+Abaixo, temos todos os scripts que foram usados no projeto:
+- [Tabelas](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/tabelas)
+- [Índices](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/indices)
+- [Gatilhos](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/gatilhos)
+- [Procedimentos Armazenados](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/procedimentos-armazenados)
+- [Funções](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/funcoes)
