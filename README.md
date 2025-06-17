@@ -28,17 +28,17 @@ Para o desenvolvimento deste projeto, utilizamos o banco de dados [Azure SQL](ht
 
 Abaixo, temos todos os scripts que foram usados no projeto:
 
-# DDL
+### DDL
 - [Script de Criação das Tabelas](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/tabelas)
 - [Script de Criação dos Índices](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/indices)
 - [Script de Criação dos Gatilhos](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/gatilhos)
 - [Script de Criação dos Procedimentos Armazenados](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/procedimentos-armazenados)
 - [Script de Criação das Funções](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/funcoes)
 
-# DML 
+### DML 
 - [Inserção de dados nas tabelas](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DML)
 
-# DQL
+### DQL
 - [Script das consultas para as perguntas de negócio](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DQL)
 
 ## Códifo Fonte de CRUD
