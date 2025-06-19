@@ -97,3 +97,21 @@ INSERT INTO Pagamentos (id_apolice, data_pagamento, valor_pago, forma_pagamento,
 (10, GETDATE(), 49.90, 'Pix', 'Pago'),
 (11, GETDATE(), 49.90, 'Pix', 'Pago'),
 (12, GETDATE(), 69.90, 'Cartão', 'Pago');
+
+--Novos inserts para contemplar as perguntas 1 e 2
+
+INSERT INTO Sinistros (id_apolice, data_ocorrencia, descricao, tipo_ocorrencia, status_sinistro)
+VALUES (2, '2025-04-15', 'Queda novamente', 'Dano', 'Em análise'),
+(3, '2025-05-10', 'Tentativa de roubo', 'Roubo', 'Concluído'),
+(4, '2025-06-01', 'Dano acidental em viagem', 'Dano', 'Em análise'),
+(6, '2025-05-18', 'Dano elétrico', 'Dano', 'Concluído'),
+(11, '2025-06-10', 'Queda grave', 'Dano', 'Concluído'),
+(12, '2025-06-12', 'Tela destruída', 'Dano', 'Concluído'),
+(6, '2025-06-14', 'Bateria inchada', 'Dano', 'Concluído');
+
+INSERT INTO Reparos (id_sinistro, data_envio, data_conclusao, custo_reparo) VALUES
+(4, '2025-06-11', '2025-06-15', 30000.00),
+(5, '2025-06-13', '2025-06-18', 40000.00),
+(6, '2025-06-15', '2025-06-20', 35000.00);
+
+
