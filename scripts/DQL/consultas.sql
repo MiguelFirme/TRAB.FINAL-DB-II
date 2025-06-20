@@ -82,7 +82,7 @@ GROUP BY Clientes.nome
 ORDER BY TotalDespesas DESC;
 
 
---6-Crie uma procedure que receba um ID de cliente e retorne: Dados cadastrais, Total de apólices, Total de sinistros, Valor total pago, Valor total de reparos
+--6-Faça um consulta por ID de um cliente e retorne: Dados cadastrais, Total de apólices, Total de sinistros, Valor total pago, Valor total de reparos. Ou seja, a ficha de um cliente.
 CREATE OR ALTER PROCEDURE sp_resumo_cliente @id_cliente INT AS
 BEGIN
     DECLARE @total_apolices INT,
