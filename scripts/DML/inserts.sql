@@ -75,7 +75,7 @@ INSERT INTO Sinistros (id_apolice, data_ocorrencia, descricao, tipo_ocorrencia, 
 (8, '2023-05-01', 'Dano por água', 'Dano', 'Em análise'),
 (8, '2024-10-12', 'Roubo no ônibus', 'Roubo', 'Concluído'),
 (9, '2025-05-10', 'Perda no shopping', 'Perda', 'Em análise'),
-(10, '2023-05-15', 'Roubo na saída do trabalho', 'Roubo', 'Concluído');
+(10, '2023-05-15', 'Roubo na saída do trabalho', 'Roubo', 'Concluído'),
 (2, '2025-04-15', 'Queda novamente', 'Dano', 'Em análise'),
 (3, '2025-05-10', 'Tentativa de roubo', 'Roubo', 'Concluído'),
 (4, '2025-06-01', 'Dano acidental em viagem', 'Dano', 'Em análise'),
@@ -89,7 +89,7 @@ INSERT INTO Reparos (id_sinistro, data_envio, data_conclusao, custo_reparo) VALU
 (4, '2025-03-16', '2025-03-25', 700.00),
 (5, '2025-04-11', '2025-04-20', 400.00),
 (8, '2025-05-02', '2025-05-12', 600.00),
-(10, '2025-05-16', '2025-05-25', 750.00);
+(10, '2025-05-16', '2025-05-25', 750.00),
 (4, '2025-06-11', '2025-06-15', 30000.00),
 (5, '2025-06-13', '2025-06-18', 40000.00),
 (6, '2025-06-15', '2025-06-20', 35000.00);
