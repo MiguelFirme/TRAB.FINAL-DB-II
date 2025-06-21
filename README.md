@@ -48,7 +48,10 @@ Abaixo, temos todos os scripts que foram usados no projeto:
 ### DQL
 - [Script das consultas para as perguntas de negócio](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DQL)
 
-## Códifo Fonte de CRUD
+## Código Fonte de CRUD
 - Linguagem de Programação PHP
 
 ## Passos para execução do CRUD
+
+## Relatório Final
+O relatório final pode ser acessado no arquivo: 
