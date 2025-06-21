@@ -18,8 +18,8 @@ CREATE TABLE Clientes (
     telefone VARCHAR(11) NOT NULL,
     data_cadastro SMALLDATETIME NOT NULL,
 
-CONSTRAINT fk_clientes_endereco FOREIGN KEY (id_endereco)
-        REFERENCES enderecos (id_endereco)
+    CONSTRAINT fk_clientes_endereco FOREIGN KEY (id_endereco)
+        REFERENCES Enderecos (id_endereco)
 );
 
 CREATE TABLE Aparelhos (
@@ -46,19 +46,23 @@ CREATE TABLE Planos_Seguro (
     cobertura_internacional BIT NOT NULL 
 );
 
-
 CREATE TABLE Apolices (
     id_apolice INT IDENTITY PRIMARY KEY,
     id_aparelho INT NOT NULL,
+    id_cliente INT NOT NULL,
     id_plano TINYINT NOT NULL,
     data_inicio_vigencia SMALLDATETIME NOT NULL,
     data_fim_vigencia SMALLDATETIME NOT NULL,
     valor_cobertura DECIMAL(10,2) NOT NULL,
     valor_franquia DECIMAL(10,2) NOT NULL,
     status_apolice VARCHAR(15) NOT NULL,
-   
+
     CONSTRAINT fk_apolice_aparelho FOREIGN KEY (id_aparelho)
         REFERENCES Aparelhos (id_aparelho),
+
+    CONSTRAINT fk_apolice_cliente FOREIGN KEY (id_cliente)
+        REFERENCES Clientes (id_cliente),
+
     CONSTRAINT fk_apolice_plano FOREIGN KEY (id_plano)
         REFERENCES Planos_Seguro (id_plano)
 );
