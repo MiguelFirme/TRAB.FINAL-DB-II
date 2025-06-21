@@ -10,15 +10,13 @@ BEGIN
     SET ap.status_apolice = 'Cliente Reincidente'
     FROM Apolices ap
     INNER JOIN inserted i ON ap.id_apolice = i.id_apolice
-    INNER JOIN Aparelhos a ON ap.id_aparelho = a.id_aparelho
-    INNER JOIN Clientes c ON a.id_cliente = c.id_cliente
+    INNER JOIN Clientes c ON ap.id_cliente = c.id_cliente
     WHERE (
-        SELECT COUNT(s2.id_sinistro)
+        SELECT COUNT(1)
         FROM Sinistros s2
         INNER JOIN Apolices ap2 ON s2.id_apolice = ap2.id_apolice
-        INNER JOIN Aparelhos a2 ON ap2.id_aparelho = a2.id_aparelho
         WHERE 
-            a2.id_cliente = c.id_cliente
+            ap2.id_cliente = ap.id_cliente
             AND s2.data_ocorrencia >= DATEADD(MONTH, -12, GETDATE())
     ) > 1
     AND ap.status_apolice = 'Ativa';
