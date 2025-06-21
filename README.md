@@ -25,7 +25,7 @@ Microsoft Drivers for PHP for SQL Server (Procure por SQLSRV_82_TS.zip (Thread S
 Utilizamos a ferramenta de modelagem de dados [dbdiagram.io](https://dbdiagram.io/) para a criação do nosso modelo físico do projeto e exportamos os scripts DDL a partir dele. 
 Arquivo fonte: [Modelo Físico](https://dbdiagram.io/d/683508c16980ade2eb84272b) 
 
-![Modelo Físico](modelo_fisico/MODELO FISICO.jpg)
+![Modelo Físico](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/blob/main/modelo_fisico/MODELO%20F%C3%8DSICO.jpg)
 
 ## Dicionário de Dados
 As informações sobre as tabelas e índices, como nomes das colunas, tipos de dados, entre outras características, foram documentados na planilha: 
