@@ -47,19 +47,19 @@ VALUES
 ('Ouro', 'Prata + reposição emergencial', 69.90, 1, 1, 1 , 0),
 ('Diamante', 'Ouro + cobertura internacional', 89.90, 1, 1, 1, 1);
 
-INSERT INTO Apolices (id_aparelho, id_plano, data_inicio_vigencia, data_fim_vigencia, valor_cobertura, valor_franquia, status_apolice) VALUES
-(1, 1, GETDATE(), DATEADD(year, 1, GETDATE()), 3000.00, 300.00, 'Ativa'),
-(2, 2, GETDATE(), DATEADD(year, 1, GETDATE()), 4500.00, 400.00, 'Ativa'),
-(3, 3, GETDATE(), DATEADD(year, 1, GETDATE()), 2500.00, 250.00, 'Ativa'),
-(4, 4, GETDATE(), DATEADD(year, 1, GETDATE()), 2800.00, 280.00, 'Ativa'),
-(5, 1, GETDATE(), DATEADD(year, 1, GETDATE()), 2000.00, 200.00, 'Ativa'),
-(6, 2, GETDATE(), DATEADD(year, 1, GETDATE()), 3500.00, 300.00, 'Ativa'),
-(7, 3, GETDATE(), DATEADD(year, 1, GETDATE()), 4000.00, 400.00, 'Ativa'),
-(8, 4, GETDATE(), DATEADD(year, 1, GETDATE()), 2000.00, 200.00, 'Ativa'),
-(9, 3, GETDATE(), DATEADD(year, 1, GETDATE()), 1800.00, 180.00, 'Ativa'),
-(10, 2, GETDATE(), DATEADD(year, 1, GETDATE()), 3500.00, 350.00, 'Ativa'),
-(11, 2, GETDATE(), DATEADD(YEAR, 1, GETDATE()), 1600.00, 160.00, 'Ativa'),
-(12, 3, GETDATE(), DATEADD(YEAR, 1, GETDATE()), 3500.00, 350.00, 'Ativa');
+INSERT INTO Apolices (id_aparelho, id_cliente, id_plano, data_inicio_vigencia, data_fim_vigencia, valor_cobertura, valor_franquia, status_apolice) VALUES
+(1, 1, 1, GETDATE(), DATEADD(year, 1, GETDATE()), 3000.00, 300.00, 'Ativa'),
+(2, 2, 2, GETDATE(), DATEADD(year, 1, GETDATE()), 4500.00, 400.00, 'Ativa'),
+(3, 3, 3, GETDATE(), DATEADD(year, 1, GETDATE()), 2500.00, 250.00, 'Ativa'),
+(4, 4, 4, GETDATE(), DATEADD(year, 1, GETDATE()), 2800.00, 280.00, 'Ativa'),
+(5, 5, 1, GETDATE(), DATEADD(year, 1, GETDATE()), 2000.00, 200.00, 'Ativa'),
+(6, 6, 2, GETDATE(), DATEADD(year, 1, GETDATE()), 3500.00, 300.00, 'Ativa'),
+(7, 7, 3, GETDATE(), DATEADD(year, 1, GETDATE()), 4000.00, 400.00, 'Ativa'),
+(8, 8, 4, GETDATE(), DATEADD(year, 1, GETDATE()), 2000.00, 200.00, 'Ativa'),
+(9, 9, 3, GETDATE(), DATEADD(year, 1, GETDATE()), 1800.00, 180.00, 'Ativa'),
+(10, 10, 2, GETDATE(), DATEADD(year, 1, GETDATE()), 3500.00, 350.00, 'Ativa'),
+(11, 11, 2, GETDATE(), DATEADD(YEAR, 1, GETDATE()), 1600.00, 160.00, 'Ativa'),
+(12, 12, 3, GETDATE(), DATEADD(YEAR, 1, GETDATE()), 3500.00, 350.00, 'Ativa');
 
 INSERT INTO Sinistros (id_apolice, data_ocorrencia, descricao, tipo_ocorrencia, status_sinistro) VALUES
 (1, '2024-01-15', 'Roubo em via pública', 'Roubo', 'Em análise'),
