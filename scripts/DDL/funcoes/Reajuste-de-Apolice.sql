@@ -33,3 +33,5 @@ BEGIN
 
     RETURN @valor_final;
 END;
+
+SELECT dbo.AjusteApolice(2, 4500.00) AS ValorAjustado;
