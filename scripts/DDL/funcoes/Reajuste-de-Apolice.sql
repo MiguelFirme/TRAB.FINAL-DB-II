@@ -11,7 +11,6 @@ BEGIN
 
     ;WITH SinistrosOrdenados AS (
         SELECT 
-            s.id_sinistro,
             s.data_ocorrencia,
             LAG(s.data_ocorrencia) OVER (ORDER BY s.data_ocorrencia) AS data_anterior
         FROM Sinistros s
@@ -33,5 +32,8 @@ BEGIN
 
     RETURN @valor_final;
 END;
+
+SELECT dbo.AjusteApolice(2, 49.90) AS ValorAjustado
+
 
 SELECT dbo.AjusteApolice(2, 4500.00) AS ValorAjustado;
