@@ -71,7 +71,7 @@ extension=php_pdo_sqlsrv.dll extension=php_sqlsrv.dll
 - Inicie o Apache no painel de controle do XAMPP
 - Acesse o localhost na porta configurada no Apache para visualizar a aplicação rodando
 
-##Slides De Explicação do Projeto
+## Slides De Explicação do Projeto
 https://www.canva.com/design/DAGq1ukxlno/CDM6dswWc7BXo0pKOMZBKw/edit?utm_content=DAGq1ukxlno&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton 
 
 ## Relatório Final
