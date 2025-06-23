@@ -1,3 +1,5 @@
+--A procedure lista os 5 modelos de aparelhos com maior custo médio de reparo (acima de R$ 2.000), filtrando por data e quantidade mínima de reparos.
+Ela ranqueia os modelos com base nesse custo médio.
 CREATE PROCEDURE RankingCustoAparelhos
     @data_inicio DATE = NULL,
     @data_fim DATE = NULL,
