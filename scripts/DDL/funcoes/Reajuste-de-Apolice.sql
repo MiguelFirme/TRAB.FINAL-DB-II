@@ -34,6 +34,3 @@ BEGIN
 END;
 
 SELECT dbo.AjusteApolice(2, 49.90) AS ValorAjustado
-
-
-SELECT dbo.AjusteApolice(2, 4500.00) AS ValorAjustado;
