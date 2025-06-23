@@ -52,6 +52,24 @@ Abaixo, temos todos os scripts que foram usados no projeto:
 - Linguagem de Programação PHP
 
 ## Passos para execução do CRUD
+# Configure os drivers PHP para SQL Server
+- Baixe os drivers adequados para sua versão do PHP
+- Extraia os arquivos php_pdo_sqlsrv.dll e php_sqlsrv.dll para a pasta ext do seu PHP (ex: C:\xampp\php\ext).
+- Edite o arquivo php.ini (localizado em C:\xampp\php\php.ini) e adicione as seguintes linhas:
+extension=php_pdo_sqlsrv.dll extension=php_sqlsrv.dll
+
+# Reinicie o Apache pelo painel de controle do XAMPP
+
+# Inicialização do Banco de Dados
+- Abra o SSMS e conecte-se ao servidor local.
+-  Crie um novo banco de dados com o nome desejado.
+- Execute os scripts SQL fornecidos em [Script de Criação das Tabelas](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DDL/tabelas) e [Inserção de dados nas tabelas](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/scripts/DML) deste repositório para criar as tabelas e popular os dados iniciais.
+
+# Inicialização da aplicação
+- Clone este repositório dentro da pasta htdocs do XAMPP (exemplo: C:\xampp\htdocs\crud)
+- Configure as variáveis de conexão com o banco de dados no arquivo de configuração da aplicação
+- Inicie o Apache no painel de controle do XAMPP
+- Acesse o localhost na porta configurada no Apache para visualizar a aplicação rodando
 
 ## Relatório Final
 O relatório final pode ser acessado no arquivo: [Relatório Final](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/blob/main/relat%C3%B3rio_final/relat%C3%B3rio%20final.pdf)
