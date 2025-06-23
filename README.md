@@ -28,7 +28,7 @@ Arquivo fonte: [Modelo Físico](https://dbdiagram.io/d/683508c16980ade2eb84272b)
 ![Modelo Físico](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/blob/main/modelo_fisico/Modelo%20F%C3%ADsico.png)
 
 ## Dicionário de Dados
-As informações sobre as tabelas e índices, como nomes das colunas, tipos de dados, entre outras características, foram documentados na planilha: 
+As informações sobre as tabelas e índices, como nomes das colunas, tipos de dados, entre outras características, foram documentados na planilha: [Dicionário de Dados](https://1drv.ms/x/c/5576921882e7f69e/EXQDFXCGh-1HruKdxPGphE0Bc5xqxiLqCYORbUkB-RdVcg?e=awEFI0)
 
 ## Scripts SQL
 Para o desenvolvimento deste projeto, utilizamos o banco de dados [Azure SQL](https://azure.microsoft.com/pt-br/products/azure-sql/database)
