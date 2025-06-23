@@ -28,7 +28,7 @@ Arquivo fonte: [Modelo Físico](https://dbdiagram.io/d/683508c16980ade2eb84272b)
 ![Modelo Físico](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/blob/main/modelo_fisico/Modelo%20F%C3%ADsico.png)
 
 ## Dicionário de Dados
-As informações sobre as tabelas e índices, como nomes das colunas, tipos de dados, entre outras características, foram documentados na planilha: [Dicionário de Dados](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/blob/main/Dicionario_dados/Dicionario%20de%20Dados.xlsx)
+As informações sobre as tabelas e índices, como nomes das colunas, tipos de dados, entre outras características, foram documentados na planilha: [Dicionário de Dados](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/tree/main/Dicionario_dados)
 
 ## Scripts SQL
 Para o desenvolvimento deste projeto, utilizamos o banco de dados [Azure SQL](https://azure.microsoft.com/pt-br/products/azure-sql/database)
@@ -72,4 +72,4 @@ extension=php_pdo_sqlsrv.dll extension=php_sqlsrv.dll
 - Acesse o localhost na porta configurada no Apache para visualizar a aplicação rodando
 
 ## Relatório Final
-O relatório final pode ser acessado no arquivo: [Relatório Final](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/blob/main/relat%C3%B3rio_final/relat%C3%B3rio%20final.pdf)
+O relatório final pode ser acessado no arquivo: [Relatório Final](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/blob/main/relat%C3%B3rio_final/relat%C3%B3rio-final.pdf)
