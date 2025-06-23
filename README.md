@@ -8,10 +8,10 @@ Criar um banco de dados relacional e um sistema funcional para o gerenciamento d
 Banco de Dados: SQL Server
 Linguagem para CRUD: PHP
 
-XAMPP: Baixar XAMPP para Windows
-SQL Server Express: Baixar SQL Server Express (Escolha a versão "Express")
-Microsoft SQL Server Management Studio (SSMS): Baixar SSMS
-Microsoft Drivers for PHP for SQL Server (Procure por SQLSRV_82_TS.zip (Thread Safe) ou SQLSRV_82_NTS.zip (Non-Thread Safe))
+- XAMPP: Baixar XAMPP para Windows
+- SQL Server Express: Baixar SQL Server Express (Escolha a versão "Express")
+- Microsoft SQL Server Management Studio (SSMS): Baixar SSMS
+- Microsoft Drivers for PHP for SQL Server (Procure por SQLSRV_82_TS.zip (Thread Safe) ou SQLSRV_82_NTS.zip (Non-Thread Safe))
 
 ## 👥 Integrantes
 - Ana Julia Vieira Lidorio — anajulidorio
