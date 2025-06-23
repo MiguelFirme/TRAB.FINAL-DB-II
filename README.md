@@ -54,4 +54,4 @@ Abaixo, temos todos os scripts que foram usados no projeto:
 ## Passos para execução do CRUD
 
 ## Relatório Final
-O relatório final pode ser acessado no arquivo: 
+O relatório final pode ser acessado no arquivo: [Relatório Final](https://github.com/MiguelFirme/TRAB.FINAL-DB-II/blob/main/relat%C3%B3rio_final/relat%C3%B3rio%20final.pdf)
