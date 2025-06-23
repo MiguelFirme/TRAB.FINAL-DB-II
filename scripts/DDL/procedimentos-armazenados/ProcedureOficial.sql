@@ -34,3 +34,6 @@ BEGIN
     ORDER BY posicao_ranking;
 
 END;
+
+--Uso: sempre que novos reparos forem registrados ou novos modelos apresentarem reparos, teremos um levantamento atualizado para identificar em quais aparelhos vale a pena cobrar uma franquia mais alta. 
+--Formas para executar: EXEC RankingCustoAparelhos; EXEC RankingCustoAparelhos @data_inicio = '2024-01-01', @data_fim = '2024-12-31'; EXEC RankingCustoAparelhos @data_inicio = '2024-01-01', @data_fim = '2024-12-31', @min_reparos = 3;
